@@ -1,0 +1,19 @@
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+
+
+export const Login = () => {
+    const { store, actions } = useContext(Context);
+
+    const handleLogin = (event) =>{
+        event.preventDefault();
+        actions.login("test", "test")
+    }
+
+
+    return (
+        <form onSubmit={handleLogin}>
+            <button type="submit">Click Me</button>
+        </form>
+    )
+}

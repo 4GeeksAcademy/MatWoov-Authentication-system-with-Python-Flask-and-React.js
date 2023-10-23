@@ -25,7 +25,7 @@ def login():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
     # Hacer consulta a la tabla user si el email y password estan, y si el usuario esta activo
-    if email != "test" or password != "test":
+    if email != "test@gmail.com" or password != "test":
         response_body = {"message": "Bad email or password"}
         return response_body, 401
     access_token = create_access_token(identity=email)
